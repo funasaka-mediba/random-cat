@@ -29,8 +29,14 @@ const IndexPage: NextPage<Props> = ({ initialImageUrl }) => {
     // ローディング中でなければ、画像を表示する
     return (
         <div className={styles.page}>
-            <button onClick={handleClick} className={styles.button}>他のニャンコも見る</button>
-            <div className={styles.frame}>{loading || <img src={imageUrl} className={styles.img} />}</div>
+            <button onClick={handleClick} className={styles.button} style={{
+                backgroundColor: "#319795",
+                border: "none",
+                borderRadius: "4px",
+                color: "white",
+                padding: "4px 8px",
+            }}>きょうのにゃんこ</button>
+            <div className={styles.frame} style={{ marginTop: 8, maxWidth: 500 }}>{loading || <img src={imageUrl} className={styles.img} width="100%" height="auto" alt="猫" />}</div>
         </div>
     );
 };
