@@ -10,7 +10,7 @@ type Props = {
 // ページコンポーネント関数にpropsを受け取る引数を追加する
 const IndexPage: NextPage<Props> = ({ initialImageUrl }) => {
     // useStateを使用して状態を定義する
-    const [imageUrl, setImageUrl] = useState(initialImageUrl); // 初期値を渡す
+    const [imageCatUrl, setImageUrl] = useState(initialImageUrl); // 初期値を渡す
     const [loading, setLoading] = useState(true); // 初期状態はfalseにしておく
     // マウント時に画像を読み込む宣言
     // useEffect(() => {
@@ -29,8 +29,8 @@ const IndexPage: NextPage<Props> = ({ initialImageUrl }) => {
     // ローディング中でなければ、画像を表示する
     return (
         <div className={styles.page}>
-            <button onClick={handleClick} className={styles.button}>他のニャンコも見る</button>
-            <div className={styles.frame}>{loading || <img src={imageUrl} className={styles.img} />}</div>
+            <button onClick={handleClick} className={styles.button}>きょうのにゃんこ</button>
+            <div className={styles.frame}>{loading || <img src={imageCatUrl} className={styles.img} />}</div>
         </div>
     );
 };
