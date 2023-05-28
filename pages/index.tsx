@@ -36,7 +36,7 @@ const IndexPage: NextPage<Props> = ({ initialImageUrl }) => {
                 color: "white",
                 padding: "4px 8px",
             }}>きょうのにゃんこ</button>
-            <div style={{ marginTop: 8, maxWidth: 500 }}>{loading || <img src={imageUrl} className={styles.img} />}</div>
+            <div className={styles.frame}>{loading || <img src={imageUrl} className={styles.img} />}</div>
         </div>
     );
 };
